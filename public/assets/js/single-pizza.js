@@ -63,6 +63,12 @@ function printPizza(pizzaData) {
 }
 
 function printComment(comment) {
+  console.log(
+    "printComment current comment = " +
+      comment.writtenBY +
+      " created at: " +
+      comment.createdAt
+  );
   // make div to hold comment and subcomments
   const commentDiv = document.createElement("div");
   commentDiv.classList.add(
@@ -108,6 +114,7 @@ function printComment(comment) {
 }
 
 function printReply(reply) {
+  console.log("printReply -" + JSON.stringify(reply));
   return `
   <div class="card p-2 rounded bg-secondary">
     <p>${reply.writtenBy} replied on ${reply.createdAt}:</p>
